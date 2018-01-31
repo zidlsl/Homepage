@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="ko"> 
+	<head> 
+	<meta charset="UTF-8">
+	<title>쿠폰북</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="../icon1.ico" type="image/x-cion"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+
+	<body>
+	<div data-role="page" id="main" data-theme="b">
+  	<div data-role="header" data-theme="b">
+  		<h1>쿠폰북 로그인</h1>
+  	</div>
+  	<div data-role="content" data-theme="b">
+	<form name="a" id="a" method="post" action="#">
+  		<div align="center"> <p>쿠폰북 회원이신가요?</p> </div>
+			<label for="logincode"> 사용자 구분 : </label>
+  			<fieldset data-role="controlgroup" data-type="horizontal">
+  			<select name="logincode" id="logincode" data-native-menu="false">
+				<option value="user">일반회원</option>
+				<option value="cp">업체회원</option>
+			</select>
+  			</fieldset> <br>
+  		<label for="userid"> ID(8자 이상) : </label>
+  		<input type="text" name="userid" id="userid" maxlength=30 placeholder="abcd1234"/> <br>
+
+  		<label for="password"> 비밀번호(6~12) : </label>
+  		<input type="password" name="passwd" id="passwd" maxlength=12 placeholder="Password"/> <br>
+
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<input type="button" value="로그인" onClick="logincheckForm();"/>
+			</div>
+			<div class="ui-block-b">
+				<input type="button" value="회원가입-일반사용자" onClick="location.href='join.html'"/> <br>
+			</div>
+			<div class="ui-block-c">
+				<input type="button" value="회원가입-업체" onclick="location.href='cpjoin.html'"/> <br>
+			</div>
+		</div>
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<input type="button" value="ID 찾기" onClick="idPage();"/>
+			</div>
+			<div class="ui-block-b">
+				<input type="button" value="PW 찾기" onClick="pwPage();"/>
+			</div>
+		</div>
+		</form>
+	</div>
+  	</div>
+ </body>
+</html>
